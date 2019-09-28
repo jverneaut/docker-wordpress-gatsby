@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
   db:
@@ -19,6 +19,8 @@ services:
     working_dir: /var/www/html
     volumes:
       - ./wp-content:/var/www/html/wp-content
+      - ./wp-content/themes:/var/www/html/wp-content/themes:ro
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins:ro
     ports:
       - '8000:80'
     restart: always

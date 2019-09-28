@@ -1,7 +1,3 @@
 .DS_Store
-/wp-content/*
-!/wp-content/plugins
-/wp-content/plugins/akismet
-/wp-content/plugins/hello.php
-/wp-content/plugins/index.php
-!/wp-content/themes/headless-theme
+/wp-content/languages
+/wp-content/upgrade
