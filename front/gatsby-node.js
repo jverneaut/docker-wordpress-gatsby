@@ -1,5 +1,5 @@
-const createPages = require(`./utils/createPages`)
+const createPages = require(`./utils/createPages`);
 
 exports.createPages = async ({ actions, graphql }) => {
-  await createPages({ actions, graphql })
-}
+  await createPages({ actions, graphql });
+};

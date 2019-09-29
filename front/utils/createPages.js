@@ -1,9 +1,9 @@
-const path = require("path")
+const path = require('path');
 
-const pageTemplate = require.resolve("../src/pages/page.js")
+const pageTemplate = require.resolve('../src/pages/page.js');
 
 module.exports = async ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   const result = await graphql(`
     {
@@ -16,9 +16,9 @@ module.exports = async ({ actions, graphql }) => {
         }
       }
     }
-  `)
+  `);
 
-  const { pages } = result.data.wpgraphql
+  const { pages } = result.data.wpgraphql;
   pages.nodes.forEach(node => {
     createPage({
       path: node.slug,
@@ -26,6 +26,6 @@ module.exports = async ({ actions, graphql }) => {
       context: {
         pageId: node.pageId,
       },
-    })
-  })
-}
+    });
+  });
+};
